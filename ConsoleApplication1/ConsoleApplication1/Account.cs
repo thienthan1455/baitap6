@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
     public class Account
     {
-        private int i;
+        int i;
         public Account(int money)
         {
             i = money;
