@@ -1,37 +1,40 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApplication1;
+using MyQueue;
 
-
-namespace UnitTestProject2
+namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTeststack
+    public class UnitTest1
     {
         [TestMethod]
+        public void TestMethod1()
+        {
+        }
         public void TestPush()
         {
-            Queue s = new Queue (10);
-           
-            
+            Queue s = new Queue(10);
+
+
         }
         [TestMethod]
         public void TestPop()
         {
             Queue s = new Queue(10);
-            
+
         }
         [TestMethod]
         public void TestPeek()
         {
             Queue s = new Queue(10);
-            
+
         }
         [TestMethod]
         public void TestClear()
         {
             Queue s = new Queue(10);
-            
+
         }
     }
 }
+

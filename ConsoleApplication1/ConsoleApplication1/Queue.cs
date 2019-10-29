@@ -4,53 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace MyQueue
+{
+    public class Queue
     {
-        public class Queue
+        private int top;
+        private int get;
+        private string[] buffer;
+        public Queue(int size)
         {
-            private int[] buffer;
-            private int top;
-            private int p;
-
-            public Queue()
-            {
-                this.buffer = new int[10];
-                this.top = 0;
-            }
-
-            public Queue(int p)
-            {
-                // TODO: Complete member initialization
-                this.p = p;
-            }
-            public void Enqueue(int n)
-            {
-                buffer[top - 1] = n;
-            }
-            public int Dequeue()
-            {
-                int n = buffer[0];
-                for (int i = 0; i < top; i++)
-                    buffer[i] = buffer[i + 1];
-                top--;
-                return n;
-            }
-            public int peek()
-            {
-                return buffer[0];
-            }
-            public int count()
-            {
-
-                return top + 1;
-            }
-            public void clear()
-            {
-                top = -1;
-            }
-
-           
+            buffer = new string[size];
+            top = -1;
+        }
+        public Queue()
+        {
+            buffer = new string[1000];
+            top = -1;
+        }
+        public void Enqueue(string value)
+        {
+            buffer[top + 1] = value;
+            top++;
+            get = 0;
+        }
+        public string Dequeue()
+        {
+            string value = buffer[get];
+            top--;
+            get++;
+            return value;
+        }
+        public string Peek()
+        {
+            string value = buffer[get];
+            return value;
+        }
+        public int Count()
+        {
+            return top + 1;
+        }
+        public void Clear()
+        {
+            top = -1;
         }
     }
-
-
+}
