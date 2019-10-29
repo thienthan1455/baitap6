@@ -2,49 +2,36 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleApplication1;
 
-namespace UnitTestAccount
+
+namespace UnitTestProject2
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTeststack
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestPush()
         {
-            Account acc = new Account(200000);
-
-            Assert.IsNotNull(acc);
-            Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(200000, acc.Balance());
+            Queue s = new Queue (10);
+           
+            
         }
-                [TestMethod]
-
-        public void TestMethodDeposit()
+        [TestMethod]
+        public void TestPop()
         {
-            Account acc = new Account(500000);
-            acc.Deposit(100000);
-            Assert.AreEqual(600000, acc.Balance());
-            acc.Deposit(100000);
-            Assert.AreEqual(700000, acc.Balance());
+            Queue s = new Queue(10);
+            
         }
-                [TestMethod]
-
-        public void TestMethodWithdraw()
+        [TestMethod]
+        public void TestPeek()
         {
-            Account acc = new Account(300000);
-            acc.Deposit(100000);
-            Assert.AreEqual(400000, acc.Balance());
-            acc.Deposit(100000);
-            Assert.AreEqual(500000, acc.Balance());
+            Queue s = new Queue(10);
+            
         }
-                [TestMethod]
-
-        public void TestMethod()
+        [TestMethod]
+        public void TestClear()
         {
-            Account acc = new Account(300000);
-            acc.Deposit(100000);
-            Assert.AreEqual(400000, acc.Balance());
-            acc.Deposit(100000);
-            Assert.AreEqual(500000, acc.Balance());
+            Queue s = new Queue(10);
+            
         }
     }
 }
